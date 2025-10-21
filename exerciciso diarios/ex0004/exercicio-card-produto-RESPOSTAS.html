@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício: Card de Produto - RESPOSTAS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+        }
+
+        .card {
+            width: 300px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s transform, 0.3s box-shadow;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .card-imagem {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .card-conteudo {
+            padding: 20px;
+        }
+
+        .titulo {
+            color: #333;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .preco {
+            color: #e74c3c;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .descricao {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .botao {
+            width: 100%;
+            padding: 12px 0;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s background-color;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .botao:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .card {
+                width: 100%;
+                max-width: 400px;
+            }
+            
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=Produto+1" alt="Smartphone Premium" class="card-imagem">
+            <div class="card-conteudo">
+                <h2 class="titulo">Smartphone Premium</h2>
+                <p class="preco">R$ 1.299,99</p>
+                <p class="descricao">
+                    Smartphone com tela de 6.5", câmera tripla de 64MP, 128GB de armazenamento e bateria de longa duração. Perfeito para o seu dia a dia.
+                </p>
+                <button class="botao">Comprar Agora</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200/e74c3c/ffffff?text=Produto+2" alt="Fone Bluetooth" class="card-imagem">
+            <div class="card-conteudo">
+                <h2 class="titulo">Fone Bluetooth</h2>
+                <p class="preco">R$ 199,99</p>
+                <p class="descricao">
+                    Fone de ouvido sem fio com cancelamento de ruído, 20h de bateria e qualidade de áudio premium. Ideal para música e chamadas.
+                </p>
+                <button class="botao">Comprar Agora</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200/2ecc71/ffffff?text=Produto+3" alt="Smartwatch" class="card-imagem">
+            <div class="card-conteudo">
+                <h2 class="titulo">Smartwatch</h2>
+                <p class="preco">R$ 599,99</p>
+                <p class="descricao">
+                    Relógio inteligente com monitoramento de saúde, GPS integrado, resistente à água e mais de 100 modalidades esportivas.
+                </p>
+                <button class="botao">Comprar Agora</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

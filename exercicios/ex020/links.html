@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    
+    <style>
+        /*
+          #  = id
+          .  = class
+          :  = pseudo-classe
+          :: = pseudo-elemento
+          >  = filho direto
+          espaço = descendente
+        */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        a {
+            text-decoration: none;
+            color: red;
+            font-weight: bold;
+        }
+        a:visited{
+            color: darkred;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: black;
+        }
+        a:active{
+            color: blue;
+        }
+        a::after{
+            content: " (link externo)";
+            text-decoration: none;
+            font-weight: normal ;
+            font-size: 0.8em;
+            color: gray;
+            font-style: italic;
+        }
+        .especial{
+            color: green;
+            background-color: rgb(243, 127, 127);
+        }   
+        .especial::after{
+            content: " (link especial)";
+            color: darkgreen;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://www.exemplo1.com">Exemplo 1</a></li>
+        <li><a href="https://www.exemplo2.com" class="especial">Exemplo 2</a></li>
+        <li><a href="https://www.exemplo3.com">Exemplo 3</a></li>
+    </ul>
+</body>
+</html>

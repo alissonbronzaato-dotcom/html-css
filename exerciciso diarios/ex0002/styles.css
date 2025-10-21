@@ -1,0 +1,571 @@
+/* 
+========================================
+🎯 EXERCÍCIO 002: FLEXBOX & CSS GRID
+========================================
+
+Instruções:
+1. Siga as instruções do arquivo INSTRUCOES.md
+2. Complete cada seção seguindo as dicas de CSS
+3. Teste a responsividade redimensionando a janela
+4. Use as variáveis CSS definidas abaixo
+
+Tempo estimado: 45-60 minutos
+*/
+
+/* ===== IMPORTAR FONTE ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ===== VARIÁVEIS CSS ===== */
+:root {
+    /* TODO: Defina as variáveis de cores conforme as instruções */
+    --primary: #6366f1; /* Indigo-500 */
+    --secundary: #ec4899; /* Pink-500 */
+    --accent: #10b981; /* Green-500 */
+    --dark: #1f2937; /* Gray-800 */
+    --light: #f8fafc; /* Gray-50 */
+    --border: #e5e7eb; /* Gray-200 */
+    /* Dica: Use as cores sugeridas no arquivo INSTRUCOES.md */
+}
+
+/* ===== RESET BÁSICO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* TODO: Configure a fonte, cor e background usando as variáveis */
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+    background-color: var(--light);
+    line-height: 1.6;
+    font-size: 16px;
+    /* Dica: font-family: 'Inter', sans-serif; */
+}
+
+/* ===== HEADER E NAVIGATION ===== */
+.header {
+    /* TODO: Adicione padding e background */
+    position: sticky;
+    top: 0;
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px var(--shadow);
+    z-index: 100;
+    /* Dica: Use position: sticky para fixar no topo */
+}
+
+.navigation {
+    /* TODO: Configure flexbox para organizar logo e nav-links */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Dica: justify-content: space-between; */
+}
+
+.logo {
+    /* TODO: Estilize o logo com fonte maior e peso bold */
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    /* Dica: font-size: 1.5rem; font-weight: 700; */
+}
+
+.nav-links {
+    /* TODO: Configure flexbox para os links de navegação */
+    display: flex;
+    gap: 2rem;
+    
+    /* Dica: gap: 2rem; */
+}
+
+.nav-link {
+    /* TODO: Remova sublinhado e adicione hover effects */
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+    /* Dica: transition: color 0.3s ease; */
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.main-layout {
+    /* TODO: Configure CSS Grid conforme as instruções */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "hero"
+        "about"
+        "projects"
+        "contact";
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    /* Dica: grid-template-areas define as áreas nomeadas */
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    /* TODO: Configure grid-area e flexbox para centralizar conteúdo */
+    grid-area: hero;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secundary) 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 4em 2em;
+}
+
+.hero-title {
+    /* TODO: Fonte grande e bold, use as variáveis de cor */
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+
+.hero-subtitle {
+    /* TODO: Fonte menor, cor mais suave */
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-button {
+    /* TODO: Botão com padding, border-radius e hover effect */
+    background-color: var(--white);
+    color: var(--primary);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    
+    /* Dica: cursor: pointer; transform: translateY(-2px) no hover */
+}
+
+/* ===== ABOUT SECTION ===== */
+.about {
+    /* TODO: Configure grid-area conforme as instruções */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+
+}
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+.about {
+    grid-area: about;
+}
+
+.about-content {
+    /* TODO: Use flexbox ou grid para organizar texto e skills */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* Dica: flex-direction: column in mobile, row in desktop */
+}
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.skills {
+    /* TODO: Configure flexbox para as skill-items */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill-item {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+    /* TODO: Estilize como badges/pills */
+
+}
+.skill-item:hover {
+    transform: scale(1.05);
+}
+
+.highlight {
+    /* TODO: Destaque palavras importantes */
+    color: var(--primary);
+    font-weight: 600;
+    
+    /* Dica: color: var(--primary); font-weight: 600; */
+}
+
+/* ===== PROJECTS SECTION ===== */
+.projects {
+    /* TODO: Configure grid-area */
+    grid-area: projects;
+}
+
+.projects-grid {
+    /* TODO: Configure CSS Grid para os cards de projeto */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    /* Dica: grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+}
+
+.project-card {
+    /* TODO: Configure flexbox e estilo do card */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: all 0.3s ease;
+    /* Dica: flex-direction: column; border-radius: 12px; */
+}
+
+.project-card:hover {
+    /* TODO: Adicione efeito hover */
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    /* Dica: transform: translateY(-8px); */
+}
+
+.project-image {
+    /* TODO: Configure altura e overflow */
+    height: 200px;
+    overflow: hidden;
+    /* Dica: height: 200px; overflow: hidden; */
+}
+
+.placeholder-image {
+    /* TODO: Configure para ocupar toda área da imagem */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    /* Dica: width: 100%; height: 100%; display: flex; */
+}
+
+.project-info {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* TODO: Padding interno do card */
+}
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.project-description {
+    color: #6b7280;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.project-tags {
+    /* TODO: Configure flexbox para as tags */
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    /* Dica: gap: 0.5rem; */
+}
+
+.tag {
+    /* TODO: Estilize as tags como badges pequenas */
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid var(--border);
+
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact {
+    /* TODO: Configure grid-area */
+    grid-area: contact;
+}
+
+.contact-content {
+    /* TODO: Configure flexbox ou grid para organizar info e form */
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    /* Dica: Em desktop, lado a lado; em mobile, um abaixo do outro */
+}
+
+.contact-info {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-label {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.contact-value {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.contact-form {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.contact-form h3 {
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+
+}
+
+.form {
+    /* TODO: Configure flexbox com direction column */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    /* Dica: gap: 1rem; */
+}
+
+.form-input,
+.form-textarea {
+    /* TODO: Estilize os campos do formulário */
+    padding: 1rem;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    /* Dica: padding, border, border-radius, focus:outline */
+}
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #5856eb;
+    transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    /* TODO: Centralize texto e adicione padding */
+    text-align: center;
+    padding: 2rem 0;    
+    margin-top: 4rem;
+    border-top: 1px solid var(--border);
+    color: #6b7280;
+}
+
+/* ===== SEÇÃO TÍTULOS ===== */
+.section-title {
+    /* TODO: Estilize títulos das seções */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--dark);
+    text-align: center;
+    /* Dica: font-size: 2rem; margin-bottom: 2rem; */
+}
+
+/* ========================================
+   📱 MEDIA QUERIES - RESPONSIVIDADE
+========================================*/
+
+/* TODO: Tablets (768px+) */
+@media (min-width: 768px) {
+    .main-layout {
+        gap: 5rem;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .about-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .about-text {
+        flex: 2;
+    }
+    
+    .skills {
+        flex: 1;
+        flex-direction: column;
+    }
+    
+    .contact-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .contact-info,
+    .contact-form {
+        flex: 1;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+    .main-layout {
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 
+            "hero hero"
+            "about projects"
+            "contact contact";
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero {
+        padding: 6rem 2rem;
+    }
+    
+    .hero-title {
+        font-size: 4.5rem;
+    }
+}
+
+/* Desktop Grande (1440px+) */
+@media (min-width: 1440px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .main-layout {
+        grid-template-columns: 1fr 3fr;
+    }
+}
+
+/* ========================================
+🏆 DESAFIO BONUS (OPCIONAL)
+========================================
+
+Se você quiser ir além, tente implementar:
+
+1. Animações de entrada nos cards:
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+2. Menu hamburger para mobile
+
+3. Modo escuro/claro
+
+4. Filtros nos projetos
+
+*/
+@keyframes fadeInUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.project-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Animação para skills */
+.skill-item {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.skill-item:nth-child(1) { animation-delay: 0.1s; }
+.skill-item:nth-child(2) { animation-delay: 0.2s; }
+.skill-item:nth-child(3) { animation-delay: 0.3s; }
+.skill-item:nth-child(4) { animation-delay: 0.4s; }
+.skill-item:nth-child(5) { animation-delay: 0.5s; }

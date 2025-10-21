@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Portfólio - Exercício HTML5 e CSS3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>João Silva</h1>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Olá, eu sou João!</h2>
+                <p>Desenvolvedor Front-end iniciante apaixonado por criar experiências web incríveis.</p>
+                <button class="cta-button">Veja meus projetos</button>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <div class="container">
+                <h2>Sobre Mim</h2>
+                <div class="sobre-content">
+                    <div class="sobre-texto">
+                        <p>Sou um entusiasta da tecnologia que está começando sua jornada no desenvolvimento web. Tenho paixão por aprender novas linguagens e criar projetos que fazem a diferença.</p>
+                        <p>Atualmente estou focado em HTML5, CSS3 e JavaScript, sempre buscando melhorar minhas habilidades e conhecer as melhores práticas do mercado.</p>
+                    </div>
+                    <div class="sobre-imagem">
+                        <div class="placeholder-img">
+                            <span>Sua Foto Aqui</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <div class="container">
+                <h2>Minhas Habilidades</h2>
+                <div class="habilidades-grid">
+                    <div class="habilidade">
+                        <h3>HTML5</h3>
+                        <div class="progress-bar">
+                            <div class="progress html"></div>
+                        </div>
+                        <span>85%</span>
+                    </div>
+                    <div class="habilidade">
+                        <h3>CSS3</h3>
+                        <div class="progress-bar">
+                            <div class="progress css"></div>
+                        </div>
+                        <span>75%</span>
+                    </div>
+                    <div class="habilidade">
+                        <h3>JavaScript</h3>
+                        <div class="progress-bar">
+                            <div class="progress js"></div>
+                        </div>
+                        <span>60%</span>
+                    </div>
+                    <div class="habilidade">
+                        <h3>Git</h3>
+                        <div class="progress-bar">
+                            <div class="progress git"></div>
+                        </div>
+                        <span>70%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <div class="container">
+                <h2>Meus Projetos</h2>
+                <div class="projetos-grid">
+                    <div class="projeto">
+                        <div class="projeto-imagem">
+                            <span>Projeto 1</span>
+                        </div>
+                        <h3>Landing Page</h3>
+                        <p>Uma landing page responsiva criada com HTML5 e CSS3 puro.</p>
+                        <div class="projeto-links">
+                            <a href="#" class="btn-demo">Demo</a>
+                            <a href="#" class="btn-codigo">Código</a>
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <div class="projeto-imagem">
+                            <span>Projeto 2</span>
+                        </div>
+                        <h3>Calculadora</h3>
+                        <p>Calculadora simples desenvolvida com HTML, CSS e JavaScript.</p>
+                        <div class="projeto-links">
+                            <a href="#" class="btn-demo">Demo</a>
+                            <a href="#" class="btn-codigo">Código</a>
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <div class="projeto-imagem">
+                            <span>Projeto 3</span>
+                        </div>
+                        <h3>To-Do List</h3>
+                        <p>Lista de tarefas interativa com funcionalidades de adicionar e remover.</p>
+                        <div class="projeto-links">
+                            <a href="#" class="btn-demo">Demo</a>
+                            <a href="#" class="btn-codigo">Código</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 João Silva. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

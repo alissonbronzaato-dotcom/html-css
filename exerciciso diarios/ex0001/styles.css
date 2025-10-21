@@ -1,0 +1,192 @@
+/* TODO: Complete este exercício seguindo as instruções */
+        
+        /* 1. Importe a fonte 'Poppins' do Google Fonts (weights: 300, 400, 600, 700) */
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        /* 2. Configure o reset básico e variáveis CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            /* TODO: Defina as variáveis de cores */
+            /* --primary-color: defina uma cor primária (ex: azul) */
+            --primary-color: #2563eb;  
+            /* --secondary-color: defina uma cor secundária (ex: laranja) */
+            --secondary-color: #f59e0b;
+            /* --text-dark: cor para texto escuro */
+            --text-dark: #4c6b98;
+            /* --text-light: cor para texto claro */
+            --text-light: #f9fafb;
+            /* --bg-light: cor de fundo clara */
+            --bg-light: #ffffff;
+            /* --bg-dark: cor de fundo escura */
+            --bg-dark: #111827;
+        }
+        
+        body {
+            /* TODO: Configure a fonte padrão como 'Poppins' com fallback */
+            font-family: 'Poppins', arial, sans-serif;
+            /* TODO: Configure o tamanho base como 16px */
+            font-size: 16px;
+            /* TODO: Configure a altura da linha como 1.6 */
+            line-height: 1.6;
+            /* TODO: Use a variável de cor de texto escuro */
+            color: var(--text-dark);
+            /* TODO: Use a variável de cor de fundo clara */
+            background-color: var(--bg-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* TODO: Estilize o header */
+        header {
+            /* TODO: Adicione padding vertical de 3rem */
+            padding: 3rem 0;
+            /* TODO: Centralize o texto */
+            text-align: center; 
+            /* TODO: Use a cor de fundo escura */
+            background-color: var(--bg-dark);
+            /* TODO: Use a cor de texto clara */
+        }
+        
+        .main-title {
+            /* TODO: Configure font-size como 3.5rem (usando clamp para responsividade) */
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            /* TODO: Configure font-weight como 700 */
+            font-weight: 700;
+            /* TODO: Configure margin-bottom como 1rem */
+            margin-bottom: 1rem;
+            /* TODO: Use text-shadow sutil */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            /* TODO: Configure font-size como 1.2rem */
+            font-size: 1.2rem;
+            /* TODO: Configure font-weight como 300 */
+            font-weight: 300;
+            /* TODO: Configure opacity como 0.9 */
+            opacity: 0.9;
+        }
+        
+        /* TODO: Estilize a seção principal */
+        main {
+            /* TODO: Adicione padding vertical de 4rem */
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            /* TODO: Configure font-size como 2.5rem */
+            font-size: 2.5rem;
+            /* TODO: Configure font-weight como 600 */
+            font-weight: 600;
+            /* TODO: Configure margin-bottom como 2rem */
+            margin-bottom: 2rem;
+            /* TODO: Use a cor primária */
+            color: var(--primary-color);
+            text-align: center;
+            /* TODO: Adicione uma borda inferior de 3px com a cor secundária */
+            border-bottom: 3px solid var(--secondary-color);
+            /* TODO: Configure padding-bottom como 0.5rem */
+            padding-bottom: 0.5rem;
+        }
+        
+        .card {
+            /* TODO: Configure background como branco */
+            background-color: var(--bg-light);
+            /* TODO: Adicione border-radius de 12px */
+            border-radius: 12px;
+            /* TODO: Adicione padding de 2rem */
+            padding: 2rem;
+            /* TODO: Adicione margin-bottom de 2rem */
+            margin-bottom: 2rem;
+            /* TODO: Adicione box-shadow sutil */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* TODO: Adicione transição suave para hover */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            /* TODO: Transforme scale(1.02) */
+            transform: scale(1.02);
+            /* TODO: Aumente a box-shadow */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-title {
+            /* TODO: Configure font-size como 1.8rem */
+            font-size: 1.8rem;
+            /* TODO: Configure font-weight como 600 */
+            font-weight: 600;
+            /* TODO: Configure margin-bottom como 1rem */
+            margin-bottom: 1rem;
+            /* TODO: Use a cor primária */
+            color: var(--primary-color);
+        }
+        
+        .card-text {
+            /* TODO: Configure font-size como 1.1rem */
+            font-size: 1.1rem;
+            /* TODO: Configure font-weight como 400 */
+            font-weight: 400;
+            /* TODO: Configure line-height como 1.8 */
+            line-height: 1.8;
+            /* TODO: Configure margin-bottom como 1.5rem */
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight {
+            /* TODO: Use a cor secundária */
+            color: var(--secondary-color);
+            /* TODO: Configure font-weight como 600 */
+            font-weight: 600;
+            /* TODO: Adicione background-color com alpha */
+            background-color: rgba(255, 0, 0, 0.1);
+            /* TODO: Adicione padding pequeno */
+            padding: 0.2rem 0.4rem;
+            /* TODO: Adicione border-radius pequeno */
+            border-radius: 4px;
+        }
+        
+        /* TODO: Adicione media queries para responsividade */
+        @media (max-width: 768px) {
+            .container {
+                /* TODO: Reduza o padding para 1rem */
+                padding: 1rem;
+            }
+            
+            .main-title {
+                /* TODO: Reduza font-size para 2.5rem */
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                /* TODO: Reduza font-size para 2rem */
+                font-size: 2rem;
+
+            }
+            
+            .card {
+                /* TODO: Reduza padding para 1.5rem */
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-title {
+                /* TODO: Reduza font-size para 2rem */
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                /* TODO: Reduza font-size para 1.5rem */
+                font-size: 1.5rem;
+            }
+        }

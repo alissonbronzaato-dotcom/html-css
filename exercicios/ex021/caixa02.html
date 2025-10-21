@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping tags</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        header {
+            background-color: lightblue;
+            padding: 10px;
+            text-align: center;
+            margin: 10px;
+            box-sizing: border-box;
+            /* Flexbox no CONTAINER PAI para centralizar o nav */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            margin-top: 10px;
+            padding: 5px;
+            /* Flexbox para centralizar o CONTEÚDO (links) dentro do nav */
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(73, 161, 233);
+            height: 30px;
+            width: 250px;
+            box-shadow: 0 2px 4px rgba(41, 0, 0, 0.296);
+            
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: rgb(156, 219, 245);
+            padding: 10px;
+            margin: 10px auto; /* Centraliza o main */
+            height: 350px;
+            width: 500px;
+            border-radius: 05px 10px;
+            box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.304);
+        }
+
+        article {
+            background-color: #b3fbfbb7;
+            padding: 5px;
+        }
+
+        aside {
+            background-color: rgb(91, 144, 243);
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        footer {
+            background-color: rgb(0, 0, 0);
+            color: white; 
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        footer > div {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="sobre.html">Sobre</a> |
+            <a href="contato.html">Contato</a>
+
+        </nav>
+    </header>
+    <main>
+        <section id="introducao">
+            <h2>Introdução</h2>
+            <p>Bem-vindo ao meu site. Aqui você encontrará informações sobre diversos tópicos.</p>
+        </section>
+        <section id="artigos">
+            <h2>Artigos Recentes</h2>
+            <article>
+                <h3>Primeiro Artigo</h3>
+                <p>Este é o conteúdo do meu primeiro artigo.</p>
+            <aside>
+                <p>Leia mais sobre este tópico em nosso blog.</p>
+            </aside>
+        </article>
+        <article>
+            <h3>Segundo Artigo</h3>
+            <p>Este é o conteúdo do meu segundo artigo.</p>
+        </article>
+            
+        </section>
+
+    </main>
+    <footer>
+        <p>Meu site &copy; 2025. criado por <div>Alisson Bronzatto</div></p>
+    </footer>
+
+
+</body>
+</html>

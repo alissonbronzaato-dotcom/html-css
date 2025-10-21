@@ -1,0 +1,10 @@
+h1{
+    color: blue;
+    font-family: Arial, sans-serif;
+}
+p{
+    font-style: italic;
+}
+li{
+    font-weight: bold; color: green;
+}

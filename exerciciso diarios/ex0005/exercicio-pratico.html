@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 EXERCÍCIO: Portfólio Pessoal</title>
+    <style>
+        /* ========== RESET E BASE ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* ========== EXERCÍCIO PARA COMPLETAR ========== */
+        
+        /* TODO 1: Estilize o header
+           - Cor de fundo: #2c3e50
+           - Cor do texto: branca
+           - Padding: 20px
+           - Use flexbox para centralizar o conteúdo
+        */
+        header {
+            /* COMPLETE AQUI */
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px; /* CORRIGIDO: adicionado px */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* TODO 2: Estilize o h1 do header
+           - Tamanho da fonte: 2.5em
+           - Margem inferior: 10px
+        */
+        /* BONUS 2: Animação slideIn */
+        @keyframes slideIn {
+            from { 
+                transform: translateY(-50px); 
+                opacity: 0; 
+            }
+            to { 
+                transform: translateY(0); 
+                opacity: 1; 
+            }
+        }
+
+        header h1 {
+            /* COMPLETE AQUI */
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            /* BONUS 2: Aplicando a animação */
+            animation: slideIn 1s ease-out;
+        }
+
+        /* TODO 3: Estilize a navegação
+           - Cor de fundo: #34495e
+           - Use flexbox para distribuir os links
+           - Padding: 15px 0
+           - Centralize horizontalmente na página
+           - Largura máxima: 800px
+        */
+        nav {
+            /* COMPLETE AQUI */
+            background-color: #34495e;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* TODO 4: Estilize os links da navegação
+           - Remova sublinhado
+           - Cor: branca
+           - Padding: 10px 20px
+           - Transição suave de 0.3s
+           - Border-radius: 5px
+        */
+        nav a {
+            /* COMPLETE AQUI */
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            transition: all 0.3s;
+            border-radius: 5px;
+            
+        }
+
+        /* TODO 5: Efeito hover nos links
+           - Cor de fundo: #3498db
+           - Transform: scale(1.05)
+        */
+        nav a:hover {
+            /* COMPLETE AQUI */
+            background-color: #3498db;
+            transform: scale(1.05);
+        }
+
+        /* TODO 6: Estilize o main
+           - Largura máxima: 1000px
+           - Centralize na página com margin
+           - Cor de fundo: branca
+           - Padding: 30px
+           - Margin vertical: 20px
+           - Border-radius: 10px
+           - Box-shadow: 0 0 20px rgba(0,0,0,0.1)
+        */
+        main {
+            /* COMPLETE AQUI */
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,
+            0.1);
+            
+        
+        }
+
+        /* TODO 7: Estilize as sections
+           - Margem inferior: 40px
+           - Padding inferior: 20px
+           - Borda inferior: 2px solid #eee (exceto a última)
+        */
+        section {
+            /* COMPLETE AQUI */
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+
+        section:last-child {
+            /* COMPLETE AQUI - remover borda da última section */
+            border-bottom: none;
+        }
+
+        /* TODO 8: Estilize os h2
+           - Cor: #2c3e50
+           - Tamanho: 2em
+           - Margem inferior: 15px
+           - Position: relative (para adicionar linha decorativa)
+        */
+        h2 {
+            /* COMPLETE AQUI */
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        /* TODO 9: Adicione linha decorativa nos h2 (pseudo-elemento)
+           - Use ::after
+           - Content: ''
+           - Width: 50px
+           - Height: 3px
+           - Background: #3498db
+           - Position: absolute
+           - Left: 0
+           - Bottom: -5px
+        */
+        h2::after {
+            /* COMPLETE AQUI */
+            content: '';
+            width: 50;
+            height: 3px;
+            background: #3498db;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+        }
+
+        /* TODO 10: Estilize a seção de habilidades
+           - Use flexbox
+           - Flex-wrap: wrap
+           - Gap: 20px
+           - Justify-content: space-between
+        */
+        .habilidades-container {
+            /* COMPLETE AQUI */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        /* TODO 11: Estilize cada habilidade
+           - Flex: 1 1 200px (cresce, encolhe, base 200px)
+           - Background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+           - Color: white
+           - Padding: 20px
+           - Border-radius: 10px
+           - Text-align: center
+           - Transform: translateY(0)
+           - Transition: all 0.3s ease
+        */
+        .habilidade {
+            /* COMPLETE AQUI */
+            flex: 1 1 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+
+        /* TODO 12: Efeito hover nas habilidades
+           - Transform: translateY(-10px)
+           - Box-shadow: 0 10px 30px rgba(0,0,0,0.3)
+        */
+        .habilidade:hover {
+            /* COMPLETE AQUI */
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* TODO 13: Estilize o footer
+           - Background: #2c3e50
+           - Color: white
+           - Text-align: center
+           - Padding: 20px
+           - Position: relative (prepare para elementos decorativos)
+        */
+        footer {
+            /* COMPLETE AQUI */
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* BONUS - Só tente depois de completar todos os TODOs acima!
+        
+        TODO BONUS 1: Adicione um gradiente no body
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        TODO BONUS 2: Animação no header h1
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        header h1 {
+            animation: slideIn 1s ease-out;
+        }
+
+        TODO BONUS 3: Responsividade básica
+        @media (max-width: 768px) {
+            nav { flex-direction: column; }
+            .habilidades-container { flex-direction: column; }
+            main { margin: 10px; padding: 20px; }
+        }
+        */
+
+        /* ========== BONUS 3: RESPONSIVIDADE ========== */
+        @media (max-width: 768px) {
+            nav { 
+                flex-direction: column;
+                width: 100%;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+            .habilidades-container { 
+                flex-direction: column; 
+            }
+            main { 
+                margin: 10px; 
+                padding: 20px; 
+            }
+            header h1 {
+                font-size: 2em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Alisson Bronzatto</h1>
+        <p>Desenvolvedor Front-end Iniciante</p>
+    </header>
+
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <main>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>
+                Olá! Sou um desenvolvedor front-end em formação, apaixonado por criar 
+                experiências digitais incríveis. Estou constantemente aprendendo novas 
+                tecnologias e aprimorando minhas habilidades em HTML, CSS e JavaScript.
+            </p>
+            <p>
+                Quando não estou codando, gosto de ler sobre tecnologia, jogar videogames 
+                e passar tempo com minha família. Acredito que a programação é uma forma 
+                de arte que combina lógica e criatividade.
+            </p>
+        </section>
+
+        <section id="habilidades">
+            <h2>Minhas Habilidades</h2>
+            <div class="habilidades-container">
+                <div class="habilidade">
+                    <h3>HTML5</h3>
+                    <p>Estruturação semântica de páginas web</p>
+                </div>
+                <div class="habilidade">
+                    <h3>CSS3</h3>
+                    <p>Estilização e layout responsivo</p>
+                </div>
+                <div class="habilidade">
+                    <h3>JavaScript</h3>
+                    <p>Interatividade e dinamismo</p>
+                </div>
+                <div class="habilidade">
+                    <h3>Flexbox</h3>
+                    <p>Layout flexível e responsivo</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h2>Meus Projetos</h2>
+            <p>
+                <strong>🌐 Site Pessoal:</strong> Meu primeiro projeto usando HTML5 e CSS3 
+                com foco em design responsivo e acessibilidade.
+            </p>
+            <p>
+                <strong>📱 App de Tarefas:</strong> Uma aplicação simples para gerenciar 
+                tarefas diárias, desenvolvida com JavaScript vanilla.
+            </p>
+            <p>
+                <strong>🎨 Galeria de Fotos:</strong> Um projeto que explora CSS Grid 
+                e Flexbox para criar layouts de galeria dinâmicos.
+            </p>
+        </section>
+
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <p>
+                📧 <strong>Email:</strong> alisson.bronzato@gmail.com<br>
+                🔗 <strong>LinkedIn:</strong> linkedin.com/in/alissonbronzatto<br>
+                🐙 <strong>GitHub:</strong> github.com/alissonbronzatto
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 João Silva - Desenvolvedor Front-end | Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

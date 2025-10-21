@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos os Estilos de Outline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        .exemplo {
+            display: inline-block;
+            width: 150px;
+            height: 100px;
+            margin: 15px;
+            padding: 10px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 80px;
+            outline-width: 3px;
+            outline-color: darkblue;
+            vertical-align: top;
+        }
+        
+        .none { outline-style: none; }
+        .solid { outline-style: solid; }
+        .dotted { outline-style: dotted; }
+        .dashed { outline-style: dashed; }
+        .double { outline-style: double; }
+        .groove { outline-style: groove; }
+        .ridge { outline-style: ridge; }
+        .inset { outline-style: inset; }
+        .outset { outline-style: outset; }
+        .auto { outline-style: auto; }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        .explicacao {
+            background-color: #f0f0f0;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Todos os Estilos de Outline CSS</h1>
+    
+    <div class="explicacao">
+        <strong>Importante:</strong> O outline NÃO afeta o layout da página, diferente da border. 
+        Ele é desenhado por cima do conteúdo existente.
+    </div>
+    
+    <div class="exemplo none">none</div>
+    <div class="exemplo solid">solid</div>
+    <div class="exemplo dotted">dotted</div>
+    <div class="exemplo dashed">dashed</div>
+    <div class="exemplo double">double</div>
+    <div class="exemplo groove">groove</div>
+    <div class="exemplo ridge">ridge</div>
+    <div class="exemplo inset">inset</div>
+    <div class="exemplo outset">outset</div>
+    <div class="exemplo auto">auto</div>
+    
+    <div class="explicacao">
+        <h3>Usos Comuns:</h3>
+        <ul>
+            <li><strong>solid:</strong> Destaque simples e claro</li>
+            <li><strong>dotted/dashed:</strong> Destaque sutil ou temporário</li>
+            <li><strong>none:</strong> Remover outline padrão (cuidado com acessibilidade!)</li>
+            <li><strong>double:</strong> Destaque mais elaborado</li>
+            <li><strong>groove/ridge/inset/outset:</strong> Efeitos 3D decorativos</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - Desafio CSS</title>
+    
+    <!-- TODO: Vincular o arquivo CSS -->
+    <link rel="stylesheet" href="estilo/perfil.css">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- TODO: Container principal do cartão -->
+    <div class="container">
+        <div class="profile-card">
+            
+            <!-- TODO: Seção do Header com foto e nome -->
+            <div class="profile-header">
+                <!-- TODO: Adicionar foto de perfil -->
+                <div class="profile-photo">
+                    <img src="https://via.placeholder.com/120x120/4267B2/ffffff?text=FOTO" alt="Foto de Perfil">
+                </div>
+                
+                <!-- TODO: Nome e título -->
+                <h1 class="profile-name">Seu Nome Aqui</h1>
+                <p class="profile-title">Desenvolvedor(a) Front-end</p>
+                
+                <!-- TODO: Localização -->
+                <p class="profile-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    São Paulo, Brasil
+                </p>
+            </div>
+
+            <!-- TODO: Seção de informações -->
+            <div class="profile-info">
+                <h2>Sobre Mim</h2>
+                <p>Apaixonado(a) por tecnologia e desenvolvimento web. Sempre em busca de novos desafios e aprendizado contínuo!</p>
+            </div>
+
+            <!-- TODO: Seção de habilidades -->
+            <div class="profile-skills">
+                <h2>Habilidades</h2>
+                
+                <!-- TODO: Lista de habilidades com barras de progresso -->
+                <div class="skill">
+                    <span class="skill-name">HTML5</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-skill="90"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+
+                <div class="skill">
+                    <span class="skill-name">CSS3</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-skill="80"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                </div>
+
+                <div class="skill">
+                    <span class="skill-name">JavaScript</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-skill="70"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                </div>
+            </div>
+
+            <!-- TODO: Redes sociais -->
+            <div class="profile-social">
+                <h2>Conecte-se Comigo</h2>
+                <div class="social-links">
+                    <!-- TODO: Links para redes sociais -->
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- TODO: Botão de contato -->
+            <div class="profile-contact">
+                <button class="contact-btn">
+                    <i class="fas fa-envelope"></i>
+                    Entre em Contato
+                </button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

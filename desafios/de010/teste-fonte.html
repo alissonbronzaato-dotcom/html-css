@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste da Fonte Android</title>
+    <style>
+        @font-face {
+            font-family: 'android';
+            src: url('./fontes/idroid.otf') format('opentype');
+            font-weight: normal;
+        }
+        
+        .teste1 {
+            font-family: 'android', sans-serif;
+            font-size: 2em;
+            color: red;
+            margin: 20px 0;
+        }
+        
+        .teste2 {
+            font-family: android, sans-serif;
+            font-size: 2em;
+            color: blue;
+            margin: 20px 0;
+        }
+        
+        .teste3 {
+            font-family: "android", sans-serif;
+            font-size: 2em;
+            color: green;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste da Fonte Android</h1>
+    <p class="teste1">Fonte Android com aspas simples</p>
+    <p class="teste2">Fonte Android sem aspas</p>
+    <p class="teste3">Fonte Android com aspas duplas</p>
+    <p style="font-family: Arial, sans-serif; font-size: 2em;">Fonte Arial para comparação</p>
+</body>
+</html>

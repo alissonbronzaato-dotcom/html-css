@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+body {
+
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #9d8a51;
+        }
+        header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+        h1 {
+            color: blue;
+            background-color: goldenrod;
+            
+        }
+        h2 {
+            color: green;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+        }  
+        

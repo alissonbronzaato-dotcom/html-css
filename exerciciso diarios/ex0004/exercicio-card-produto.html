@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício: Card de Produto</title>
+    <style>
+        * {
+            /* TODO: Adicione box-sizing: border-box para melhor controle */
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* TODO: Defina font-family como Arial, sans-serif */
+            font-family: Arial, sans-serif;
+            /* TODO: Crie um gradiente de fundo de #667eea para #764ba2 */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* TODO: Defina altura mínima de 100vh */
+            min-height: 100vh;            
+            /* TODO: Use flexbox para centralizar o conteúdo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* TODO: Adicione padding de 20px */
+            padding: 20px;
+        }
+
+        .container {
+            /* TODO: Use flexbox */
+            display: flex;
+            /* TODO: Permita quebra de linha */
+            flex-wrap: wrap;
+            /* TODO: Centralize os cards */
+            justify-content: center;
+            /* TODO: Adicione gap de 30px entre os cards */
+            gap: 30px;
+            /* TODO: Defina largura máxima de 1200px */
+            max-width: 1200px;
+        }
+
+        .card {
+            /* TODO: Defina largura de 300px */
+            width: 300px;
+            /* TODO: Adicione fundo branco */
+            background-color:white;
+            /* TODO: Adicione bordas arredondadas de 15px */
+            border-radius: 15px;
+            /* TODO: Adicione sombra sutil: 0 4px 15px rgba(0, 0, 0, 0.1) */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            /* TODO: Adicione transição suave de 0.3s para transform e box-shadow */
+            transition: transform 0.3s, box-shadow 0.3s;
+            /* TODO: Adicione cursor pointer */
+            cursor: pointer;
+            /* TODO: Remova overflow visível */
+            overflow: hidden;
+        }
+
+        .card-imagem {
+            /* TODO: Defina largura de 100% */
+            width: 100%;
+            /* TODO: Defina altura de 200px */
+            height: 150px; /* Reduzida de 200px para 150px */
+
+            /* TODO: Use object-fit: cover para ajustar a imagem */
+            object-fit: cover;
+            /* TODO: Arredonde apenas as bordas superiores: 15px 15px 0 0 */
+            border-radius: 15px 15px 0 0;
+        }
+
+        .card-conteudo {
+            /* TODO: Adicione padding de 20px */
+            padding: 20px;
+        }
+
+        .titulo {
+            /* TODO: Defina cor #333 */
+            color: #333;
+            /* TODO: Defina tamanho de fonte 20px */
+            font-size: 20px;
+            /* TODO: Defina font-weight bold */
+            font-weight: bold;
+            /* TODO: Adicione margem inferior de 10px */
+            margin-bottom: 10px;
+        }
+
+        .preco {
+            /* TODO: Defina cor #e74c3c */
+            color: #e74c3c;
+            /* TODO: Defina tamanho de fonte 24px */
+            font-size: 24px;
+            /* TODO: Defina font-weight bold */
+            font-weight: bold;
+            /* TODO: Adicione margem inferior de 10px */
+            margin-bottom: 10px;
+        }
+
+        .descricao {
+            /* TODO: Defina cor #666 */
+            color: #666;
+            /* TODO: Defina tamanho de fonte 14px */
+            font-size: 14px;
+            /* TODO: Defina altura de linha 1.5 */
+            line-height: 1.5;
+            /* TODO: Adicione margem inferior de 20px */
+            margin-bottom: 20px;
+        }
+
+        .botao {
+            /* TODO: Defina largura de 100% */
+            width: 100%;
+            /* TODO: Adicione padding 12px 0 */
+            padding: 12px 0;
+            /* TODO: Defina cor de fundo #3498db */
+            background-color: #3498db;
+            /* TODO: Defina cor do texto branca */
+            color: white;
+            /* TODO: Remova borda */
+            border: none;
+            /* TODO: Adicione bordas arredondadas de 8px */
+            border-radius: 8px;
+            /* TODO: Defina cursor pointer */
+            cursor: pointer;
+            /* TODO: Defina tamanho de fonte 16px */
+            font-size: 16px;
+            /* TODO: Defina font-weight bold */
+            font-weight: bold;
+            /* TODO: Adicione transição de 0.3s para background-color */
+            transition: 0.3s background-color;
+        }
+
+        /* TODO: Adicione hover effect para .card */
+        .card:hover {
+            /* TODO: Transforme escala para 1.03 */
+            transform: scale(1.03);
+            /* TODO: Intensifique a sombra: 0 8px 25px rgba(0, 0, 0, 0.15) */
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        /* TODO: Adicione hover effect para .botao */
+        .botao:hover {
+            /* TODO: Mude cor de fundo para #2980b9 */
+            background-color: #2980b9;
+        }
+
+        /* Estilo para links que envolvem botões */
+        a {
+            text-decoration: none;
+            display: block;
+        }
+
+        /* TODO: Adicione media query para telas menores que 768px */
+        @media (max-width: 768px) {
+            .card-imagem {
+            height: 120px;
+    }
+            .container {
+                /* TODO: Mude direção para coluna */
+                flex-direction: column;
+                /* TODO: Reduza gap para 20px */
+                gap: 20px;
+            }
+            
+            .card {
+                /* TODO: Defina largura de 100% */
+                width: 100%;
+                /* TODO: Defina largura máxima de 400px */
+                max-width: 400px;
+            }
+            
+            body {
+                /* TODO: Reduza padding para 10px */
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="imagens/11972_tel-cel-smart-samsung-a15-128gb-sma155mzkdzto-az-e_z3_638500918648609023.webp" alt="Smartphone Premium" class="card-imagem">
+            <div class="card-conteudo">
+                <h2 class="titulo">Smartphone Premium</h2>
+                <p class="preco">R$ 1.299,99</p>
+                <p class="descricao">
+                    Smartphone com tela de 6.5", câmera tripla de 64MP, 128GB de armazenamento e bateria de longa duração. Perfeito para o seu dia a dia.
+                </p>
+                <a href="https://www.casasbahia.com.br/smartphone-motorola-moto-g56-5g-tela-6-7-256gb-8gb-ram-8gb-ram-boost-50mp-sony-lytia-600-moto-ai-turbopower-33w-ip69-desbloqueado-cinza/p/55069666?utm_medium=cpc&utm_source=GP_PLA&IdSku=55069666&idLojista=10037&tipoLojista=1P&gclsrc=aw.ds&&utm_campaign=cb_b2c_gg_shopping_core_tele_motorola&gad_source=1&gad_campaignid=22439034165&gbraid=0AAAAADtAamj2j48bNPBL_Iu_4mxDxHrwp&gclid=Cj0KCQjwrojHBhDdARIsAJdEJ_cvH1Fc8S9rpwxVZp4cXw1U3krJQ00OMLUWrH33hN9EyBCdwgdNsxwaAvvfEALw_wcB" target="_blank">
+                    <button class="botao">Comprar Agora</button>
+                </a>        
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="imagens/D_NQ_NP_2X_762197-MLU77323054961_062024-F.webp" alt="Fone Bluetooth" class="card-imagem">
+            <div class="card-conteudo">
+                <h2 class="titulo">Fone Bluetooth</h2>
+                <p class="preco">R$ 199,99</p>
+                <p class="descricao">
+                    Fone de ouvido sem fio com cancelamento de ruído, 20h de bateria e qualidade de áudio premium. Ideal para música e chamadas.
+                </p>
+                <a href="https://www.mercadolivre.com.br/fone-bluetooth-redmi-buds-4-edico-especial-harry-potter-cor-preto/p/MLB24581997?pdp_filters=item_id%3AMLB3491476007&from=gshop&matt_tool=54660454&matt_internal_campaign_id=&matt_word=&matt_source=google&matt_campaign_id=22090354553&matt_ad_group_id=173090632796&matt_match_type=&matt_network=g&matt_device=c&matt_creative=727882734915&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=735128761&matt_product_id=MLB24581997-product&matt_product_partition_id=2391999850235&matt_target_id=aud-1967156880386:pla-2391999850235&cq_src=google_ads&cq_cmp=22090354553&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=1&gad_campaignid=22090354553&gbraid=0AAAAAD93qcDKZ-T6SxD7BgOw_HDdixmf4&gclid=Cj0KCQjwrojHBhDdARIsAJdEJ_eKQU_nqW0ffmcBWkiZqeo3TLHtCEhQazks9yNebE8mQIqPZj47CA8aAmbmEALw_wcB#&gid=1&pid=1" target="_blank">
+                    <button class="botao">Comprar Agora</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200/2ecc71/ffffff?text=Produto+3" alt="Smartwatch" class="card-imagem">
+            <div class="card-conteudo">
+                <h2 class="titulo">Smartwatch</h2>
+                <p class="preco">R$ 599,99</p>
+                <p class="descricao">
+                    Relógio inteligente com monitoramento de saúde, GPS integrado, resistente à água e mais de 100 modalidades esportivas.
+                </p>
+                <a href="#" target="_blank">
+                    <button class="botao">Comprar Agora</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

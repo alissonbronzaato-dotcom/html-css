@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+/* ========================================
+   EXERCÍCIO: CSS BÁSICO PARA INICIANTES
+   ======================================== */
+
+/* TODO: Importar fonte do Google Fonts (Bebas Neue) */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* TODO: Configurar fonte personalizada Android */
+@font-face {
+    font-family: 'Android';
+    /* TODO: Adicionar caminho para a fonte idroid.otf */
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+/* TODO: Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TODO: Definir variáveis CSS para cores */
+:root {
+    /* Paleta de cores do Android */
+    --cor-fundo: #c5ebd6;
+    --cor-primaria: #83e1ad;
+    --cor-secundaria: #3ddc84;
+    --cor-terciaria: #2fa866;
+    --cor-escura: #1a5c37;
+    --cor-muito-escura: #063d1e;
+
+    /* Fontes */
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+/* TODO: Estilizar o body */
+body {
+    background-color: var(--cor-fundo);
+    font-family: var(--fonte-padrao);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* TODO: Estilizar header */
+header {
+    /* Adicione gradiente de fundo */
+    background-image: linear-gradient(to bottom, var(--cor-terciaria), var(--cor-muito-escura));
+    
+    /* TODO: Adicionar altura mínima */
+    min-height: 150px;
+    
+    /* TODO: Centralizar texto */
+    text-align: center;
+    
+    /* TODO: Adicionar padding superior */
+    padding-top: 40px;
+}
+
+/* TODO: Estilizar título do header */
+header h1 {
+    font-family: var(--fonte-destaque);
+    color: white;
+    font-size: 3em;
+    margin-bottom: 20px;
+    /* TODO: Adicionar sombra no texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* TODO: Estilizar parágrafo do header */
+header p {
+    font-family: var(--fonte-padrao);
+    color: white;
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+    padding: 0 10px;
+    /* TODO: Adicionar sombra no texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* TODO: Estilizar navegação */
+nav {
+    background-color: var(--cor-muito-escura);
+    padding: 10px;
+    /* TODO: Adicionar sombra */
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.3);
+}
+
+/* TODO: Estilizar links da navegação */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    /* TODO: Adicionar transição */
+    transition: 0.3s;
+}
+
+/* TODO: Efeito hover nos links da navegação */
+nav a:hover {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-muito-escura);
+}
+
+/* TODO: Estilizar main */
+main {
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+    padding: 20px;
+    /* TODO: Adicionar sombra */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* TODO: Arredondar bordas inferiores */
+    border-radius: 0 0 10px 10px;
+}
+
+/* TODO: Estilizar títulos h1 dentro do article */
+main article h1 {
+    color: var(--cor-muito-escura);
+    /* TODO: Usar fonte Android */
+    font-family: var(--fonte-android);
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+/* TODO: Estilizar títulos h2 dentro do article */
+main article h2 {
+    /* TODO: Usar fonte Android */
+    font-family: var(--fonte-android);
+    color: var(--cor-terciaria);
+    font-size: 1.5em;
+    margin: 20px 0 10px 0;
+    /* TODO: Adicionar fundo gradiente sutil */
+    background-image: linear-gradient(to right, var(--cor-fundo), transparent);
+    padding-left: 10px;
+}
+
+/* TODO: Estilizar parágrafos */
+main p {
+    margin: 15px 0;
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 1.8;
+}
+
+/* TODO: Estilizar texto em negrito */
+main strong {
+    color: var(--cor-escura);
+    font-weight: bold;
+}
+
+/* TODO: Estilizar links dentro do conteúdo */
+main a {
+    color: var(--cor-muito-escura);
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--cor-primaria);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* TODO: Efeito hover nos links do conteúdo */
+main a:hover {
+    background-color: var(--cor-terciaria);
+    color: white;
+    text-decoration: underline;
+}
+
+/* TODO: Estilizar rodapé */
+footer {
+    background-color: var(--cor-muito-escura);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+/* TODO: DESAFIO EXTRA: Adicione responsividade para telas pequenas */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    main {
+        margin: 0 10px 20px 10px;
+        padding: 15px;
+    }
+    
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/* ========================================
+   PARABÉNS! VOCÊ COMPLETOU O EXERCÍCIO!
+   ======================================== */

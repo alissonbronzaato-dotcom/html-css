@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 002 - Flexbox & Grid Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="navigation">
+            <div class="logo">Portfolio</div>
+            <div class="nav-links">
+                <a href="#hero" class="nav-link">Início</a>
+                <a href="#about" class="nav-link">Sobre</a>
+                <a href="#projects" class="nav-link">Projetos</a>
+                <a href="#contact" class="nav-link">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Layout -->
+    <div class="main-layout">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <h1 class="hero-title">Desenvolvedor Frontend</h1>
+            <p class="hero-subtitle">Criando experiências digitais incríveis com CSS moderno</p>
+            <button class="cta-button">Ver Projetos</button>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Sou apaixonado por <span class="highlight">desenvolvimento frontend</span> e especializado em criar layouts responsivos usando as tecnologias mais modernas do CSS.</p>
+                    <p>Trabalho com <span class="highlight">Flexbox</span> e <span class="highlight">CSS Grid</span> para construir interfaces que funcionam perfeitamente em qualquer dispositivo.</p>
+                </div>
+                <div class="skills">
+                    <div class="skill-item">HTML5</div>
+                    <div class="skill-item">CSS3</div>
+                    <div class="skill-item">Flexbox</div>
+                    <div class="skill-item">Grid</div>
+                    <div class="skill-item">Responsive</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <h2 class="section-title">Meus Projetos</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-image" style="background: linear-gradient(45deg, #6366f1, #ec4899);">
+                            <span>E-commerce</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Loja Virtual</h3>
+                        <p class="project-description">Layout responsivo para e-commerce com grid de produtos e carrinho interativo.</p>
+                        <div class="project-tags">
+                            <span class="tag">CSS Grid</span>
+                            <span class="tag">Flexbox</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-image" style="background: linear-gradient(45deg, #10b981, #6366f1);">
+                            <span>Dashboard</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Dashboard Analytics</h3>
+                        <p class="project-description">Interface administrativa com gráficos e métricas organizadas em grid layout.</p>
+                        <div class="project-tags">
+                            <span class="tag">Grid Layout</span>
+                            <span class="tag">Charts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-image" style="background: linear-gradient(45deg, #ec4899, #10b981);">
+                            <span>Blog</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Blog Pessoal</h3>
+                        <p class="project-description">Site de blog com layout magazine usando CSS Grid e tipografia moderna.</p>
+                        <div class="project-tags">
+                            <span class="tag">Typography</span>
+                            <span class="tag">Grid</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-image" style="background: linear-gradient(45deg, #f59e0b, #ec4899);">
+                            <span>App Mobile</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">App Responsivo</h3>
+                        <p class="project-description">Aplicação web que se adapta perfeitamente do mobile ao desktop.</p>
+                        <div class="project-tags">
+                            <span class="tag">Mobile First</span>
+                            <span class="tag">PWA</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2 class="section-title">Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">Email:</span>
+                        <span class="contact-value">alisson.bronzaato@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">LinkedIn:</span>
+                        <span class="contact-value">/in/desenvolvedor</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">GitHub:</span>
+                        <span class="contact-value">/desenvolvedor</span>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Envie uma mensagem</h3>
+                    <form class="form">
+                        <input type="text" placeholder="Seu nome" class="form-input">
+                        <input type="email" placeholder="Seu email" class="form-input">
+                        <textarea placeholder="Sua mensagem" rows="4" class="form-textarea"></textarea>
+                        <button type="submit" class="form-button">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Portfolio. Exercício de Flexbox & CSS Grid.</p>
+    </footer>
+
+</body>
+</html>

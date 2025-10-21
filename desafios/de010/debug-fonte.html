@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Fonte Android</title>
+    <style>
+        @font-face {
+            font-family: android-debug;
+            src: url('./fontes/idroid.otf') format('opentype');
+            font-weight: normal;
+        }
+        
+        .debug-android {
+            font-family: android-debug, monospace;
+            font-size: 3em;
+            color: red;
+            border: 3px solid blue;
+            padding: 20px;
+            text-transform: uppercase;
+        }
+        
+        .debug-normal {
+            font-family: Arial, sans-serif;
+            font-size: 3em;
+            color: green;
+            border: 3px solid orange;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TESTE DEBUG FONTE ANDROID</h1>
+    
+    <div class="debug-android">ANDROID FONT TEST</div>
+    <div class="debug-normal">ARIAL FONT TEST</div>
+    
+    <p><strong>Instruções:</strong></p>
+    <ol>
+        <li>Abra as Ferramentas do Desenvolvedor (F12)</li>
+        <li>Vá na aba "Network"</li>
+        <li>Recarregue a página (F5)</li>
+        <li>Procure pelo arquivo "idroid.otf"</li>
+        <li>Se aparecer vermelho (404), a fonte não foi encontrada</li>
+        <li>Se aparecer verde (200), a fonte foi carregada com sucesso</li>
+    </ol>
+    
+    <p><strong>Compare os dois textos:</strong> Se parecem iguais, a fonte não está funcionando. Se diferentes, a fonte está OK.</p>
+</body>
+</html>

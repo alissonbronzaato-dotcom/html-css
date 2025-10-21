@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movendo Caixas - Exemplos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .exemplo {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .caixa {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            margin: 10px 0;
+            width: 200px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        /* ===== CENTRALIZAR ===== */
+        .centro-margin {
+            width: 200px;
+            margin: 0 auto; /* CENTRALIZA */
+        }
+
+        .centro-flexbox {
+            display: flex;
+            justify-content: center; /* CENTRALIZA */
+        }
+
+        .centro-text-align {
+            text-align: center;
+        }
+        .centro-text-align .caixa {
+            display: inline-block;
+        }
+
+        /* ===== MOVER PARA DIREITA ===== */
+        .direita-margin {
+            margin-left: auto; /* Empurra para direita */
+        }
+
+        .direita-float {
+            float: right; /* Flutua à direita */
+        }
+
+        .direita-flexbox {
+            display: flex;
+            justify-content: flex-end; /* Alinha à direita */
+        }
+
+        .direita-text-align {
+            text-align: right;
+        }
+        .direita-text-align .caixa {
+            display: inline-block;
+        }
+
+        /* ===== POSICIONAMENTO ESPECÍFICO ===== */
+        .move-pixels {
+            margin-left: 100px; /* Move 100px da esquerda */
+        }
+
+        .posicao-absoluta {
+            position: relative;
+        }
+        .posicao-absoluta .caixa {
+            position: absolute;
+            right: 50px; /* 50px da direita */
+        }
+
+        /* ===== MÚLTIPLAS CAIXAS ===== */
+        .multiplas-caixas {
+            display: flex;
+            justify-content: space-between; /* Distribui espaço */
+        }
+        .multiplas-caixas .caixa {
+            width: 150px;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #666;
+            margin: 15px 0 5px 0;
+        }
+
+        .codigo {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movendo Caixas em CSS - Exemplos Práticos</h1>
+
+    <div class="exemplo">
+        <h2>1. CENTRALIZAR Caixas</h2>
+        
+        <h3>Método 1: margin: auto (mais comum)</h3>
+        <div class="codigo">margin: 0 auto;</div>
+        <div class="caixa centro-margin">Centralizada com margin</div>
+
+        <h3>Método 2: Flexbox (moderno)</h3>
+        <div class="codigo">display: flex; justify-content: center;</div>
+        <div class="centro-flexbox">
+            <div class="caixa">Centralizada com Flexbox</div>
+        </div>
+
+        <h3>Método 3: text-align (para elementos inline)</h3>
+        <div class="codigo">text-align: center; display: inline-block;</div>
+        <div class="centro-text-align">
+            <div class="caixa">Centralizada com text-align</div>
+        </div>
+    </div>
+
+    <div class="exemplo">
+        <h2>2. MOVER para a DIREITA</h2>
+
+        <h3>Método 1: margin-left: auto</h3>
+        <div class="codigo">margin-left: auto;</div>
+        <div class="caixa direita-margin">À direita com margin</div>
+
+        <h3>Método 2: float: right</h3>
+        <div class="codigo">float: right;</div>
+        <div class="clearfix">
+            <div class="caixa direita-float">À direita com float</div>
+        </div>
+
+        <h3>Método 3: Flexbox</h3>
+        <div class="codigo">display: flex; justify-content: flex-end;</div>
+        <div class="direita-flexbox">
+            <div class="caixa">À direita com Flexbox</div>
+        </div>
+
+        <h3>Método 4: text-align: right</h3>
+        <div class="codigo">text-align: right; display: inline-block;</div>
+        <div class="direita-text-align">
+            <div class="caixa">À direita com text-align</div>
+        </div>
+    </div>
+
+    <div class="exemplo">
+        <h2>3. POSICIONAMENTO Específico</h2>
+
+        <h3>Mover por pixels específicos</h3>
+        <div class="codigo">margin-left: 100px;</div>
+        <div class="caixa move-pixels">Movida 100px da esquerda</div>
+
+        <h3>Posição absoluta</h3>
+        <div class="codigo">position: absolute; right: 50px;</div>
+        <div class="posicao-absoluta">
+            <div class="caixa">50px da direita</div>
+        </div>
+    </div>
+
+    <div class="exemplo">
+        <h2>4. MÚLTIPLAS Caixas</h2>
+
+        <h3>Distribuir espaço igualmente</h3>
+        <div class="codigo">display: flex; justify-content: space-between;</div>
+        <div class="multiplas-caixas">
+            <div class="caixa">Caixa 1</div>
+            <div class="caixa">Caixa 2</div>
+            <div class="caixa">Caixa 3</div>
+        </div>
+    </div>
+
+    <div class="exemplo">
+        <h2>🔥 DICAS IMPORTANTES:</h2>
+        <ul style="line-height: 1.8;">
+            <li><strong>margin: auto</strong> - Só funciona se a caixa tiver largura definida (width)</li>
+            <li><strong>Flexbox</strong> - Método mais moderno e flexível</li>
+            <li><strong>float</strong> - Método mais antigo, mas ainda útil</li>
+            <li><strong>text-align</strong> - Só funciona com elementos inline ou inline-block</li>
+            <li><strong>position: absolute</strong> - Remove a caixa do fluxo normal</li>
+        </ul>
+    </div>
+
+</body>
+</html>

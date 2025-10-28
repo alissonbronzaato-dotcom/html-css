@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTeste de imagem de fundo</title>
+    <style>
+        body {
+            background-image: url(imagens/wallpaper001.jpg);
+
+        }
+        .quadrado {
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: antiquewhite;
+            width: 300px;
+            height: 300px;
+        }
+
+        #\'1\' {
+            background-color: lightblue;
+           
+        }
+        #\'2\' {
+            background-image: linear-gradient(to bottom, green, purple);
+        }
+
+        #\'3\' {
+            background-image: url(imagens/pattern001.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="quadrado" id="'1'">
+
+    </div>
+    <div class="quadrado" id="'2'">
+
+    </div>
+    <div class="quadrado" id="'3'">
+
+    </div>
+
+</body>
+</html>

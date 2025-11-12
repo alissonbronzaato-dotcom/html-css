@@ -1,2 +1,86 @@
 @charset "UTF-8";
 
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray
+} 
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps;
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+/* Estilos para links */
+header a, footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Link não visitado */
+header a:link, footer a:link {
+    color: white;
+}
+
+/* Link já visitado */
+header a:visited, footer a:visited {
+    color: #cccccc; /* Cor cinza claro para links visitados */
+}
+
+/* Link quando passa o mouse em cima */
+header a:hover, footer a:hover {
+    color: white;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+/* Link quando está sendo clicado */
+header a:active, footer a:active {
+    color: yellow;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(54, 52, 52);
+    color: white;
+}
+
+section.imagem p {
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.253);
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+   
+}
